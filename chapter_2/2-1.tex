@@ -1,0 +1,22 @@
+\documentclass{jsarticle}
+\usepackage{amsmath}
+\begin{document}
+\section*{Exercise 2.1 Probabilities are sensitive to the form of the question that was used to generate the answer}
+\subsection*{(a)}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{cc}
+C1 & C2 \\ \hline
+B & B\\
+B & G\\
+G & B\\
+G & G
+\end{tabular}
+\end{table}
+If the neighbor has any boys, there is only a chance to the first of the three rows in the above table.
+In this situation, the probability that one child is a girl is $\frac{2}{3}$.
+\subsection*{(b)}
+\begin{eqnarray*}
+P(Run=C1)\cdot P(C2=G|Run=C1)+P(Run=C2)\cdot P(C1=G|Run=C2) & = & \frac{1}{2}\cdot\frac{1}{2}\\ & = & \frac{1}{2}
+\end{eqnarray*}
+\end{document}
