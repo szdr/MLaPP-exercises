@@ -19,4 +19,24 @@ In this situation, the probability that one child is a girl is $\frac{2}{3}$.
 \begin{eqnarray*}
 P(Run=C1)\cdot P(C2=G|Run=C1)+P(Run=C2)\cdot P(C1=G|Run=C2) & = & \frac{1}{2}\cdot\frac{1}{2}\\ & = & \frac{1}{2}
 \end{eqnarray*}
+
+\section*{Exercise 2.2 Legal reasoning}
+\subsection*{(a)}
+\begin{eqnarray}
+G & = & \begin{cases}
+1 & (\rm defendant\ is\ guilty) \\
+0 & (\rm otherwise)
+\end{cases}\\
+B & = & \begin{cases}
+1 & (\rm defendant's\ blood\ type\ matches\ one\ at\ the\ scene)\\
+0 & (\rm otherwise)
+\end{cases}\\
+P(G=0|B=1) & = & \frac{P(B=1|G=0)\cdot P(G=0)}{P(B=1)}\\
+& = & \frac{P(B=1|G=0)\cdot P(G=0)}{P(B=1|G=1)\cdot P(G=1)+P(B=1|G=0)\cdot P(G=0)}\\
+& = & \frac{\frac{1}{1000}\times \frac{799999}{800000}}{1\times \frac{1}{800000} + \frac{1}{1000} \times \frac{799999}{800000}}\\
+& \simeq & 0.999
+\end{eqnarray}
+The probability of the defendant is innocense given that defendant's blood type matches one at the scene is 0.999.
+\subsection*{(b)}
+The probabilities of guilty of 8000 people are all the same. This fact doesn't show that the defendant is innocense.
 \end{document}
