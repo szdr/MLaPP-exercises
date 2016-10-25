@@ -1,5 +1,5 @@
 \documentclass{jsarticle}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb}
 \begin{document}
 \section*{Exercise 2.1 Probabilities are sensitive to the form of the question that was used to generate the answer}
 \subsection*{(a)}
@@ -68,4 +68,29 @@ P(X=1|Y=1) & = & \frac{P(Y=1|X=1)\cdot P(X=1)}{P(Y=1)}\\
 & \simeq & 9.8\times 10^{-3}
 \end{eqnarray}
 
+\section*{Exercise 2.5 The Mohty Hall Problem}
+\begin{eqnarray}
+X & = & \begin{cases}
+1  & (\rm the\ prize\ in\ door\ 1) \\
+2  & (\rm the\ prize\ in\ door\ 2) \\
+3  & (\rm the\ prize\ in\ door\ 3)
+\end{cases}\\
+Y & = & \begin{cases}
+1  & (\rm the\ host\ opens\ door\ 1)\\
+2  & (\rm the\ host\ opens\ door\ 2)\\
+3  & (\rm the\ host\ opens\ door\ 3)
+\end{cases}\\
+P(X=1) & = & P(X=2) = P(X=3) = \frac{1}{3}\\
+P(Y=3|X=1) & = & \frac{1}{2}\\
+P(Y=3|X=2) & = & 1\\
+P(Y=3|X=3) & = & 0\\
+P(X=1|Y=3) & = & \frac{P(Y=3|X=1)\cdot P(X=1)}{P(Y=3)}\\
+& = & \frac{P(Y=3|X=1)\cdot P(X=1)}{\sum_{i=1}^{3}P(Y=3|X=i)\cdot P(X=i)}\\
+& = & \frac{\frac{1}{2}\times \frac{1}{3}}{\frac{1}{2}\times \frac{1}{3} + 1 \times \frac{1}{3}+0\times \frac{1}{3}}\\
+& = & \frac{1}{3}\\
+P(X=3|Y=3) & = & 0\ (\because P(Y=3|X=3)=0)\\
+P(X=2|Y=3) & = & 1 - P(X=1|Y=3) - P(X=3|Y=3)\\
+& = & \frac{2}{3}
+\end{eqnarray}
+This result shows the contestant should switch to door 2.
 \end{document}
