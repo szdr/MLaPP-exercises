@@ -44,6 +44,28 @@ The probabilities of guilty of 8000 people are all the same. This fact doesn't s
 \begin{eqnarray}
 V[X+Y] & = & E[\{(X+Y)-E[X+Y]\}^2]\\
 & = & E[\{(X+Y)-(E[X]+E[Y])\}^2]\\
-& = & E[\{(X-E[X])+(Y-E[Y])\}^2]
+& = & E[\{(X-E[X])+(Y-E[Y])\}^2]\\
+& = & E[(X-E[X])^2+(Y-E[Y])^2+2(X-E[X])(Y-E[Y])]\\
+& = & E[(X-E[X])^2] + E[(Y-E[Y])^2] + 2E[(X-E[X])(Y-E[Y])]\\
+& = & V[X] + V[Y] + 2{\rm cov}[X,Y]
 \end{eqnarray}
+
+\section*{Exercise 2.4 Bayes rule for medical diagnosis}
+\begin{eqnarray}
+X & = & \begin{cases}
+1 & (\rm I\ have\ the\ disease) \\
+0 & (\rm otherwise)
+\end{cases}\\
+Y & = & \begin{cases}
+1 & (\rm testing\ positive)\\
+0 & (\rm otherwise)
+\end{cases}\\
+P(X=1|Y=1) & = & \frac{P(Y=1|X=1)\cdot P(X=1)}{P(Y=1)}\\
+& = & \frac{P(Y=1|X=1)\cdot P(X=1)}{P(Y=1|X=1)\cdot P(X=1)+P(Y=1|X=0)\cdot P(X=0)}\\
+& = & \frac{\frac{99}{100}\times \frac{1}{10000}}{\frac{99}{100}\times \frac{1}{10000} + \frac{1}{100}\times \frac{9999}{10000}}\\
+& = & \frac{99}{99 + 9999}\\
+& = & \frac{1}{102}\\
+& \simeq & 9.8\times 10^{-3}
+\end{eqnarray}
+
 \end{document}
