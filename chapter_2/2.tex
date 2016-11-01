@@ -110,4 +110,31 @@ P(e_1,e_2) &= \sum_{i=1}^{K}P(e_1,e_2|H=i)P(H=i)\\
 &= \sum_{i=1}^{K}P(e_1|H=i)P(e_2|H=i)P(H=i)
 \end{align}
 Above calculation shows (i.), (ii.) and (iii.) are sufficient.
+
+\section*{Exercise 2.7 Pairwise independence does not imply mutual independence}
+(Reference to http://www.cut-the-knot.org/Probability/MutuallyIndependentEvents.shtml)
+
+There are four balls numbered as below.
+
+\begin{align*}
+B1 = 110 \\
+B2 = 101 \\
+B3 = 011 \\
+B4 = 000
+\end{align*}
+For $k=1,2,3$ let $A_k$ be the event of drawing a ball with 1 in the $k$th position.
+\begin{align}
+P(A_1)=\frac{1}{2},\ P(A_2)=\frac{1}{2},\ P(A_3)=\frac{1}{2}\\
+P(A_1,A_2)=\frac{1}{4},\ P(A_1, A_3)=\frac{1}{4},\ P(A_2, A_3)=\frac{1}{4}\\
+\therefore P(A_1, A_2)=P(A_1)P(A_2)\\
+P(A_1, A_3)=P(A_1)P(A_3)\\
+P(A_2,A_3)=P(A_2)P(A_3)
+\end{align}
+This shows all pairs of variables are pairwise independence.
+\begin{align}
+P(A_1,A_2,A_3)=0\\
+P(A_1)P(A_2)P(A_3)=\frac{1}{8}\\
+\therefore P(A_1,A_2,A_3)=P(A_1)P(A_2)P(A_3)
+\end{align}
+This shows mutual independence doesn't hold.
 \end{document}
