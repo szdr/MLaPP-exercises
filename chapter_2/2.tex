@@ -93,4 +93,21 @@ P(X=2|Y=3) & = & 1 - P(X=1|Y=3) - P(X=3|Y=3)\\
 & = & \frac{2}{3}
 \end{eqnarray}
 This result shows the contestant should switch to door 2.
+
+\section*{Exercise 2.6 Conditional Independence}
+\subsection*{(a)}
+\begin{align}
+P(H,e_1,e_2) & = P(e_1,e_2|H)P(H)\\
+P(H,e_1,e_2) & = P(H|e_1,e_2)p(e_1,e_2)\\
+\therefore p(H|e_1,e_2) & =\frac{P(e_1,e_2|H)P(H)}{P(e_1,e_2)}
+\end{align}
+Above calculation shows (ii.) is sufficient. 
+\subsection*{(b)}
+\begin{align}
+P(H|e_1,e_2) & = \frac{P(e_1,e_2|H)P(H)}{P(e_1,e_2)}\\
+& = \frac{P(e_1|H)P(e_2|H)P(H)}{P(e_1,e_2)} (\because E_1\ {\rm and}\ E_2\ {\rm are\ conditionally\ independent\ given\ H}) \\
+P(e_1,e_2) &= \sum_{i=1}^{K}P(e_1,e_2|H=i)P(H=i)\\
+&= \sum_{i=1}^{K}P(e_1|H=i)P(e_2|H=i)P(H=i)
+\end{align}
+Above calculation shows (i.), (ii.) and (iii.) are sufficient.
 \end{document}
