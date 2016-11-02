@@ -137,4 +137,35 @@ P(A_1)P(A_2)P(A_3)=\frac{1}{8}\\
 \therefore P(A_1,A_2,A_3)=P(A_1)P(A_2)P(A_3)
 \end{align}
 This shows mutual independence doesn't hold.
+
+\section*{Exercise 2.8 Conditional independence iff joint factorizes}
+\subsection*{$(\Rightarrow)$}
+\begin{align}
+g(x,z)=p(x|z), h(y,z)=p(y|z)
+\end{align}
+\subsection*{$(\Leftarrow)$}
+\begin{align}
+p(x,y|z) & = g(x,z)h(y,z) \label{2.8}
+\end{align}
+We calculate the integral of left side and right side.
+\begin{align}
+\int_{x}p(x,y|z)dx & =\int_{x}g(x,z)h(y,z)dx\\
+p(y|z) & = h(y,z)G(x,z) 
+\end{align}
+We calculate the integral of left side and right side.
+\begin{align}
+\int_{y}p(y|z)dy & =\int_{y}h(y,z)G(x,z)dy\\
+H(y,z)G(x,z) & = 1
+\end{align}
+We calculate the integral of left side and right side of (\ref{2.8}).
+\begin{align}
+\int_{y}p(x,y|z)dy & = \int_{y}g(x,z)h(y,z)dy \\
+p(x|z) & =g(x,z)H(y,z)
+\end{align}
+Finally, we get
+\begin{align}
+p(x,y|z) & = g(x,z)h(y,z)\\
+& = \frac{p(x|z)}{H(y,z)}\frac{p(y|z)}{G(x,z)} \\
+& = p(x|z)p(y|z)
+\end{align}
 \end{document}
