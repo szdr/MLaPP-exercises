@@ -202,4 +202,14 @@ p_y(y) & =p_x(x)|\frac{dx}{dy}|\\
  & = \frac{b^a}{\Gamma(a)}y^{-(a+1)}e^{-\frac{b}{y}}\\
  & = IG(y|a,b)
 \end{align}
+
+\section*{Exercise 2.11 Normalization constant for a 1D Gaussian}
+\begin{align}
+Z^2 & = \int_{0}^{2\pi}\int_{0}^{\infty}r\exp(-\frac{r^2}{2\sigma^2})drd\theta\\
+& = \int_{0}^{2\pi}d\theta\int_{0}^{\infty}r\exp(-\frac{r^2}{2\sigma^2})dr\\
+& = 2\pi \int_{0}^{\infty}r\exp(-\frac{r^2}{2\sigma^2})dr\\
+& = 2\pi \left[-\sigma^2\exp(-\frac{r^2}{2\sigma^2})\right]_{0}^{\infty}\\
+& = 2\pi\sigma^2\\
+\therefore Z & = \sqrt{2\pi \sigma^2}
+\end{align}
 \end{document}
