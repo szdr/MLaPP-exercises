@@ -168,4 +168,29 @@ p(x,y|z) & = g(x,z)h(y,z)\\
 & = \frac{p(x|z)}{H(y,z)}\frac{p(y|z)}{G(x,z)} \\
 & = p(x|z)p(y|z)
 \end{align}
+
+\section*{Exercise 2.9 Conditional independence}
+\subsection*{(a)}
+\begin{align}
+(X \bot W|Z,Y) & \Leftrightarrow p(X,W|Z,Y) = p(X|Z,Y)p(W|Z,Y) \label{2.9.a.1} \\
+(X \bot Y|Z) & \Leftrightarrow p(X,Y|Z) = p(X|Z)p(Y|Z) \label{2.9.a.2} \\
+(X\bot Y,W|Z) & \Leftrightarrow p(X,W|Z) = p(X|Z)p(W|Z) \label{2.9.a.3} \\
+p(X,W,Z|Y) & = p(X,Y,Z)p(W|Z,Y)\ (\because (\ref{2.9.a.1})) \label{xyzw}\\
+p(X,Y,Z) & = p(X,Z)p(Y|Z)\ (\because (\ref{2.9.a.2})) \label{xyz}
+\end{align}
+Because of (\ref{xyzw}) and (\ref{xyz}), we get
+\begin{align}
+p(X,Y,Z,W) & = p(X,Z)p(Y|Z)p(W|Z,Y)\\
+& = p(X,Z)p(Y,W|Z)
+\end{align}
+We calculate the integral of left side and right side.
+\begin{align}
+\int_{Y}p(X,Y,Z,W)dY & = \int_{Y}p(X,Z)p(Y,W|Z)dY\\
+p(X,Z,W) & = p(X,Z)p(W|Z)\\
+\frac{p(X,W|Z)}{p(Z)} & = \frac{p(X|Z)}{p(Z)}p(W|Z)\\
+p(X,W|Z) & = p(X|Z)p(W|Z)
+\end{align}
+We showed (\ref{2.9.a.1}) $\wedge$ (\ref{2.9.a.2}) $\Rightarrow$ (\ref{2.9.a.3}).
+\subsection*{(b)}
+Somebody help me!
 \end{document}
