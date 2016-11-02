@@ -193,4 +193,13 @@ p(X,W|Z) & = p(X|Z)p(W|Z)
 We showed (\ref{2.9.a.1}) $\wedge$ (\ref{2.9.a.2}) $\Rightarrow$ (\ref{2.9.a.3}).
 \subsection*{(b)}
 Somebody help me!
+
+\section*{Exercise 2.10 Deriving the inverse gamma density}
+\begin{align}
+p_y(y) & =p_x(x)|\frac{dx}{dy}|\\
+ & = \frac{b^a}{\Gamma(a)}x^{a-1}e^{-xb}|-\frac{1}{y^2}|\\
+ & = \frac{b^a}{\Gamma(a)}y^{-(a-1)}e^{-\frac{b}{y}}\frac{1}{y^2}\\
+ & = \frac{b^a}{\Gamma(a)}y^{-(a+1)}e^{-\frac{b}{y}}\\
+ & = IG(y|a,b)
+\end{align}
 \end{document}
