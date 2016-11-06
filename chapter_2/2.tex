@@ -227,4 +227,21 @@ I(X,Y) & = \sum_x\sum_yp(x,y)\log\frac{p(x,y)}{p(x)p(y)}\\
 & = H(X) - H(X|Y)
 \end{align}
 $I(X,Y)=H(Y)-H(X|Y)$ can be shown like as below.
+
+\section*{Exercise 2.13 Mutual information for correlated normals}
+\begin{align}
+I(X,Y) & = -H(X) + H(X_1) + H(X_2)\\
+& = -\frac{1}{2}\log_2 [4\pi^2 e^2 \sigma^4 (1-\rho^2)] + \frac{1}{2}\log_2 [2 \pi e \sigma^2] + \frac{1}{2}\log_2 [2\pi e \sigma^2 ]\\
+& = \frac{1}{2}\log_2{\frac{4\pi^2e^2\sigma^4}{4\pi^2e^2\sigma^4(1-\rho^2)}}\\
+& = \frac{1}{2}\log_2 \frac{1}{1 - \rho^2}\\
+& = -\frac{1}{2}\log_2(1-\rho^2)
+\end{align}
+and we get 
+\begin{align}
+\begin{cases}
+\rho=1 : I(X_1,X_2)=\infty & (\rm perfect\ correlation)\\
+\rho=0 : I(X_1, X_2)=0 & (\rm independent)\\
+\rho=-1 : I(X_1, X_2)=\infty & (\rm perfect\ correlation)
+\end{cases}
+\end{align}
 \end{document}
