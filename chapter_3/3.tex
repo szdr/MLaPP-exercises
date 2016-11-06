@@ -9,4 +9,13 @@
 & = \theta^{N_1-1}(1-\theta)^{N_0-1}(N_1-N\theta)\\
 \therefore \theta_{\rm MLE} & =\frac{N_1}{N}
 \end{align}
+
+\section*{Exercise 3.2 Marginal likelihood for the Beta-Bernoulli model}
+\begin{align}
+p(D) & = \frac{[(\alpha_1)\cdots(\alpha_1+N_1-1)][(\alpha_0)\cdots(\alpha_0+N_0-1)]}{(\alpha)\cdots(\alpha + N - 1)}\\
+& = \frac{[(\alpha_1)\cdots(\alpha_1+N_1-1)][(\alpha_0)\cdots(\alpha_0+N_0-1)]}{(\alpha_1+\alpha_0)\cdots(\alpha_1 + \alpha_0 + N - 1)}\\
+& = \frac{\Gamma(\alpha_1+\alpha_0)}{\Gamma(\alpha_1+\alpha_0+N)}[(\alpha_1)\cdots (\alpha_1+N_1-1)][(\alpha_0)\cdots(\alpha_0+N_0-1)]\\
+& = \frac{\Gamma(\alpha_1+\alpha_0)}{\Gamma(\alpha_1+\alpha_0+N)}\frac{\Gamma(\alpha_1+N_1)}{\Gamma(\alpha_1)}\frac{\Gamma(\alpha_0+N_0)}{\Gamma(\alpha_0)}\\
+& = \frac{\Gamma(\alpha_1+N_1)\Gamma(\alpha_0+N_0)}{\Gamma(\alpha_1+\alpha_0+N)}\frac{\Gamma(\alpha_1+\alpha_0)}{\Gamma(\alpha_1)\Gamma(\alpha_0)}
+\end{align}
 \end{document}
