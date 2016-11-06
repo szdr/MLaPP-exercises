@@ -244,4 +244,34 @@ and we get
 \rho=-1 : I(X_1, X_2)=\infty & (\rm perfect\ correlation)
 \end{cases}
 \end{align}
+
+\section*{Exercise 2.14 A measure of correlation (normalized mutual information)}
+\subsection*{(a)}
+\begin{align}
+r & = 1 - \frac{H(Y|X)}{H(X)}\\
+& = \frac{H(X)-H(Y|X)}{H(X)}\\
+& = \frac{H(Y)-H(Y|X)}{H(X)}\\
+& = \frac{I(X,Y)}{H(X)}
+\end{align}
+\subsection*{(b)}
+$(0 \leq \frac{I(X,Y)}{H(X)})$
+\begin{align}
+I(X,Y)\geq 0 \land H(X) \geq 0\\
+\therefore \frac{I(X,Y)}{H(X)} \geq 0
+\end{align}
+$\frac{I(X,Y)}{H(X)\leq 1}$
+\begin{align}
+H(X)-I(X,Y) & = H(X) - (H(X)-H(X|Y)\\
+& = H(X|Y)\\
+& \geq 0\\
+\therefore \frac{I(X,Y)}{H(X)} \leq 1
+\end{align}
+\subsection*{(c)}
+If $r=0$, then $I(X,Y)=0$.
+And we get $p(X,Y)=p(X)p(Y)$.
+This means $X$ and $Y$ are independent.
+\subsection*{(d)}
+If $r=1$, then $I(X,Y)=H(X)$.
+And we get $H(X|Y)=0$.
+This means perfect correlation.
 \end{document}
