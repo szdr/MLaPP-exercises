@@ -283,4 +283,33 @@ This means perfect correlation.
 & = \arg \max_\theta \frac{1}{N}\sum_{i=1}^{N}\log q(x_i;\theta)\\
 & = \hat{\theta}_{MLE}
 \end{align}
+
+\section*{Exercise 2.16 Mean, mode, variance for the beta distribution}
+\subsection*{mean}
+\begin{align}
+E[\theta] & = \int \theta \frac{1}{B(a,b)}\theta^{a-1}(1-\theta)^{b-1}d\theta\\
+& = \int \frac{1}{B(a,b)}\theta^{a}(1-\theta)^{b-1}d\theta\\
+& = \int \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\theta^{a}(1-\theta)^{b-1}d\theta\\
+& = \int \frac{\Gamma(a+1+b)}{\Gamma(a+1)\Gamma(b)}\frac{a}{a+b}\theta^{a}(1-\theta)^{b-1}d\theta\\
+& = \frac{a}{a+b}\int \frac{1}{B(a+1,b)}\theta^{a}(1-\theta)^{b-1}d\theta\\
+& = \frac{a}{a+b}
+\end{align}
+\subsection*{mode}
+\begin{align}
+\frac{d}{d\theta}Beta(\theta|a,b) & = \frac{a-1}{B(a,b)}\theta^{a-2}(1-\theta)^{b-1}-\frac{b-1}{B(a,b)}\theta^{a-1}(1-\theta)^{b-2}\\
+& = \frac{\theta^{a-2}(1-\theta)^{b-2}}{B(a,b)}\{(a-1)(1-\theta) - (b-1)\theta \} \\
+& = \frac{\theta^{a-2}(1-\theta)^{b-2}}{B(a,b)}\{-(a + b - 2)\theta + a - 1 \}\\
+\theta_{mode} & = \frac{a-1}{a+b-2}
+\end{align}
+\subsection*{variance}
+\begin{align}
+E[\theta^2] & = \int \theta^2\frac{1}{B(a,b)}\theta^{a-1}(1-\theta)^{b-1}d\theta\\
+& = \int-\theta(1-\theta)\frac{1}{B(a,b)}\theta^{a-1}(1-\theta)^{b-1}d\theta + \int \theta \frac{1}{B(a,b)}\theta^{a-1}(1-\theta)^{b-1}d\theta\\
+& = -\int\frac{1}{B(a,b)}\theta^a(1-\theta)^bd\theta + \frac{a}{a+b}\\
+& = -\frac{ab}{(a+b+1)(a+b)}\int\frac{1}{B(a+1,b+1)}\theta^a(1-\theta)^bd\theta + \frac{a}{a+b}\\
+& = -\frac{ab}{(a+b+1)(a+b)} + \frac{a}{a+b}\\
+& = \frac{a^2+a}{(a+b+1)(a+b)}\\
+V[\theta] & = E[\theta^2] - E[\theta]^2 \\
+& = \frac{ab}{(a+b)^2(a+b+1)}
+\end{align}
 \end{document}
