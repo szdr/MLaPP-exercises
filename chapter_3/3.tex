@@ -107,4 +107,43 @@ p(\theta|D) & = \frac{p(D,\theta)}{p(D)}\\
 & = {\rm Pareto}(\theta|N+K,\max(D,b))
 \end{align}
 
+\section*{Exercise 3.10 Taxicab (tramcar) problem}
+\subsection*{(a)}
+\begin{align}
+p(\theta|\{100\}) & = {\rm Pareto}(\theta|1,100)\\
+& = 100 \theta^{-2}I(\theta \geq 100)
+\end{align}
+\subsection*{(b)}
+\subsubsection*{mean}
+not exist
+\subsubsection*{mode}
+100
+\subsubsection*{median}
+\begin{align}
+\int_{100}^{x}100\theta^{-2}I(\theta \geq 100)d\theta & = \frac{1}{2}\\
+100\int_{100}^{x}\theta^{-2}d\theta & = \frac{1}{2}\\
+-100[\frac{1}{\theta}]_{100}^{x} & = \frac{1}{2}\\
+\frac{1}{x} - \frac{1}{100} & = - \frac{1}{200}\\
+x & = 200
+\end{align}
+\subsection*{(c)}
+\begin{align}
+p(D'|D,\alpha) & = \int_{\theta}p(D'|\theta)p(\theta|D,\alpha)d\theta\\
+& = \int_{\theta}U(x|0,\theta){\rm Pareto}(\theta|1,m)d\theta\\
+& = \int_{\theta}\frac{1}{\theta}I[0\leq x \leq \theta]m\theta^{-2}I(\theta \geq m)d\theta \\
+& = m \int_{\theta}\theta^{-3}I[0\leq x \leq \theta]I[\theta \geq m]d\theta \\
+& = m[-\frac{1}{2}\theta^{-2}]_{\max(x,m)}^{\infty}\\
+& = \frac{m}{2\{\max(x,m) \}^2}
+\end{align}
+\subsection*{(d)}
+\begin{align}
+p(x=100|D,\alpha) & = \frac{1}{200}\\
+p(x=50|D,\alpha) & = \frac{1}{200} \\
+p(x=150|D,\alpha) & = \frac{100}{2 \cdot 150^2} = \frac{1}{450}
+\end{align}
+\subsection*{(e)}
+\begin{itemize}
+	\item More observations, more accurate.
+	\item Thy hyper-parameter of prior should be set by other information.
+\end{itemize}
 \end{document}
