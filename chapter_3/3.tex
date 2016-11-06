@@ -67,4 +67,29 @@ p(\lambda|D) & \propto p(\lambda)p(D|\lambda)\\
 \frac{a+\sum_{i=1}^{N}x_i}{b+N} & \rightarrow \frac{1}{N}\sum_{i=1}^{N}x_i\\
 & = \lambda_{MLE}
 \end{align}
+
+\section*{Exercise 3.8 MLE for the uniform distribution}
+\subsection*{(a)}
+\begin{align}
+D & = \{x_1, \dots, x_N\} \\
+p(D|a) & = \Pi_{i=1}^{N}\frac{1}{2a}I(x_i\in [-a, a])
+\end{align}
+If $\forall i\ -a \leq x_i \leq a$, then $p(D|a)=\frac{1}{(2a)^n}$.
+More smaller $a$, more larger $p(D|a)$.
+
+$\hat{a}=\max \{|x_1|,\dots, |x_N| \}$
+
+\subsection*{(b)}
+\begin{align}
+p(x_{n+1}|\hat{a}) & = \frac{1}{2\hat{a}}I(x_{n+1}\in[-\hat{a}, \hat{a}])\\
+& = \begin{cases}
+0 & (x_{n+1}\notin [-\hat{a}, \hat{a}])\\
+\frac{1}{2\hat{a}} & (x_{n+1}\in [-\hat{a}, \hat{a}])
+\end{cases} 
+\end{align}
+
+\subsection*{(c)}
+If we use MLE approach, the probability between $-\hat{a}$ and $\hat{a}$ is 0.
+Bayesian approach with introducing a wide range prior is better.
+
 \end{document}
