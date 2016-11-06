@@ -92,4 +92,19 @@ p(x_{n+1}|\hat{a}) & = \frac{1}{2\hat{a}}I(x_{n+1}\in[-\hat{a}, \hat{a}])\\
 If we use MLE approach, the probability between $-\hat{a}$ and $\hat{a}$ is 0.
 Bayesian approach with introducing a wide range prior is better.
 
+\section*{Exercise 3.9 Bayesian analysis of the uniform distribution}
+\begin{align}
+p(\theta|D) & = \frac{p(D,\theta)}{p(D)}\\
+& = \begin{cases}
+\frac{(N+K)b^N}{K}p(D,\theta) & (m \leq b) \\
+\frac{(N+K)m^{N+K}}{Kb^K}p(D, \theta) & (m > b)
+\end{cases} \\
+& = \begin{cases}
+\frac{(N+K)b^{N+K}}{\theta^{N+K+1}}I(\theta \geq \max(D,b)) & (m \leq b)\\
+\frac{(N+K)m^{N+K}}{\theta^{N+K+1}}I(\theta \geq \max(D,b)) & (m > b)
+\end{cases}\\
+& = (N+K)\{\max(D,b) \}^{N+K}\theta^{-(N+K+1)}I(\theta \geq \max (D,b)) \\
+& = {\rm Pareto}(\theta|N+K,\max(D,b))
+\end{align}
+
 \end{document}
