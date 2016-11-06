@@ -36,4 +36,11 @@ p(\theta,X<3) & = p(\theta)p(X<3|\theta)\\
 & = Beta(\theta|1,1)(\sum_{k=0}^{2}\theta^k(1-\theta)^{(5-k)})\\
 & = \sum_{k=0}^{2}\theta^k(1-\theta)^{(5-k)}
 \end{align}
+
+\section*{Exercise 3.5 Uninformative prior for log-odds ratio}
+\begin{align}
+p(\theta) & = p(\phi)|\frac{d\phi}{d\theta}|\\
+& = p(\phi)\theta^{-1}(1-\theta)^{-1}\\
+& \propto Beta(\theta|0,0)\ (\because p(\phi)\propto 1)
+\end{align}
 \end{document}
