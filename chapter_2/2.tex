@@ -312,4 +312,20 @@ E[\theta^2] & = \int \theta^2\frac{1}{B(a,b)}\theta^{a-1}(1-\theta)^{b-1}d\theta
 V[\theta] & = E[\theta^2] - E[\theta]^2 \\
 & = \frac{ab}{(a+b)^2(a+b+1)}
 \end{align}
+
+\section*{Exercise 2.17 Expected value of the minimum}
+\begin{align}
+Z & = \min(X,Y)\\
+F(t) & = p(Z \leq t)\\
+ & = 1 - p(Z \ge t)\\
+ & = 1 - p(X \ge t, Y \ge t)\\
+ & = 1 - p(X \ge t)p(Y \ge t)\\
+ & = 1 - (1 - t)^2\\
+ & = -t^2+2t \\
+f(t) & = \frac{d}{dt}F(t)\\
+ & = -2t + 2\\
+\int_{0}^{1}tf(t)dt & = \int_{0}^{1}(-2t^2+2t)dt\\
+ & = [-\frac{2}{3}t^3+t^2]_0^1\\
+ & = \frac{1}{3}
+\end{align}
 \end{document}
