@@ -212,4 +212,19 @@ Z^2 & = \int_{0}^{2\pi}\int_{0}^{\infty}r\exp(-\frac{r^2}{2\sigma^2})drd\theta\\
 & = 2\pi\sigma^2\\
 \therefore Z & = \sqrt{2\pi \sigma^2}
 \end{align}
+
+\section*{Exercise 2.12 Expressing mutual information in terms of entropies}
+\begin{align}
+I(X,Y) & = \sum_x\sum_yp(x,y)\log\frac{p(x,y)}{p(x)p(y)}\\
+& = \sum_x\sum_yp(x,y)\log\frac{p(x|y)p(y)}{p(x)p(y)}\\
+& = \sum_x\sum_yp(x,y)(-\log p(x)+\log p(x|y))\\
+& = -\sum_x\sum_yp(x,y)\log p(x) + \sum_x\sum_yp(x,y)\log p(x,y)\\
+& = -\sum_xp(x)\log p(x) + \sum_x\sum_yp(x,y)\log p(x|y)\\
+& = H(x) + \sum_x\sum_yp(x,y)\log p(x|y)\\
+& = H(X) + \sum_x\sum_yp(y)p(x|y)\log p(x|y)\\
+& = H(X) + \sum_y p(y)\sum_xp(x|y)\log p(x|y)\\
+& = H(X) - \sum_y p(y) H(X|Y=y)\\
+& = H(X) - H(X|Y)
+\end{align}
+$I(X,Y)=H(Y)-H(X|Y)$ can be shown like as below.
 \end{document}
