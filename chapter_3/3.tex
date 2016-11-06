@@ -1,0 +1,12 @@
+\documentclass{jsarticle}
+\usepackage{amsmath, amssymb}
+\begin{document}
+\section*{Exercise 3.1 MLE for the Bernoulli/ binomial model}
+\begin{align}
+\frac{d}{d\theta}p(D|\theta) & = \frac{d}{d\theta}(\theta^{N_1}(1-\theta)^{N_0})\\
+& = N_1 \theta^{N_1-1}(1-\theta)^{N_0}-N_0\theta^{N_1}(1-\theta)^{N_01}\\
+& = \theta^{N_1-1}(1-\theta)^{N_0-1}(N_1(1-\theta)-N_0\theta) \\
+& = \theta^{N_1-1}(1-\theta)^{N_0-1}(N_1-N\theta)\\
+\therefore \theta_{\rm MLE} & =\frac{N_1}{N}
+\end{align}
+\end{document}
