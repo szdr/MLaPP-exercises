@@ -18,4 +18,13 @@ p(D) & = \frac{[(\alpha_1)\cdots(\alpha_1+N_1-1)][(\alpha_0)\cdots(\alpha_0+N_0-
 & = \frac{\Gamma(\alpha_1+\alpha_0)}{\Gamma(\alpha_1+\alpha_0+N)}\frac{\Gamma(\alpha_1+N_1)}{\Gamma(\alpha_1)}\frac{\Gamma(\alpha_0+N_0)}{\Gamma(\alpha_0)}\\
 & = \frac{\Gamma(\alpha_1+N_1)\Gamma(\alpha_0+N_0)}{\Gamma(\alpha_1+\alpha_0+N)}\frac{\Gamma(\alpha_1+\alpha_0)}{\Gamma(\alpha_1)\Gamma(\alpha_0)}
 \end{align}
+
+\section*{Exercise 3.3 Posterior prdictive for Beta-Binomial model}
+\begin{align}
+Bb(1|\alpha_1',\alpha_0',1) & = \frac{B(1+\alpha_1',1-1+\alpha_0')}{B(\alpha_1',\alpha_0')} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \\
+& = \frac{B(1+\alpha_1', \alpha_0')}{B(\alpha_1',\alpha_0')}\\
+& = \frac{\Gamma(\alpha_1'+\alpha_0')}{\Gamma(\alpha_1')\Gamma(\alpha_0')}\frac{\Gamma(1+\alpha_1')\Gamma(\alpha_0')}{\Gamma(1+\alpha_1'+\alpha_0')}\\
+& = \frac{\Gamma(\alpha_1'+\alpha_0')}{\Gamma(\alpha_1')\Gamma(\alpha_0')}\frac{\alpha_1'\Gamma(\alpha_1')\Gamma(\alpha_0')}{(\alpha_1'+\alpha_0')\Gamma(\alpha_1'+\alpha_0')}\\
+& = \frac{\alpha_1'}{\alpha_1'+\alpha_0'}
+\end{align}
 \end{document}
