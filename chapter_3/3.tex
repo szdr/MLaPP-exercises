@@ -27,4 +27,13 @@ Bb(1|\alpha_1',\alpha_0',1) & = \frac{B(1+\alpha_1',1-1+\alpha_0')}{B(\alpha_1',
 & = \frac{\Gamma(\alpha_1'+\alpha_0')}{\Gamma(\alpha_1')\Gamma(\alpha_0')}\frac{\alpha_1'\Gamma(\alpha_1')\Gamma(\alpha_0')}{(\alpha_1'+\alpha_0')\Gamma(\alpha_1'+\alpha_0')}\\
 & = \frac{\alpha_1'}{\alpha_1'+\alpha_0'}
 \end{align}
+
+\section*{Exercise 3.4 Beta updating from censored likelihood}
+\begin{align}
+p(\theta,X<3) & = p(\theta)p(X<3|\theta)\\
+& = p(\theta)(\sum_{k=0}^{2}p(X=k|\theta))\\
+& = p(\theta)(\sum_{k=0}^{2}\theta^k(1-\theta)^{(5-k)})\\
+& = Beta(\theta|1,1)(\sum_{k=0}^{2}\theta^k(1-\theta)^{(5-k)})\\
+& = \sum_{k=0}^{2}\theta^k(1-\theta)^{(5-k)}
+\end{align}
 \end{document}
