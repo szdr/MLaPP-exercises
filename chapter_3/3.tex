@@ -43,4 +43,28 @@ p(\theta) & = p(\phi)|\frac{d\phi}{d\theta}|\\
 & = p(\phi)\theta^{-1}(1-\theta)^{-1}\\
 & \propto Beta(\theta|0,0)\ (\because p(\phi)\propto 1)
 \end{align}
+
+\section*{Exercise 3.6 MLE for the Poisson distribution}
+\begin{align}
+D & = \{x_1, x_2, \dots, x_N\}\\
+p(D|\lambda) & = \Pi_{i=1}^{N}Poi(x_i|\lambda)\\
+& = e^{-N\lambda}\frac{\lambda^{\sum_{i=1}^{N}x_i}}{\Pi_{i=1}^{N}(x_i!)}\\
+\log p(D|\lambda) & = -N\lambda + \sum_{i=1}^{N}x_i\log \lambda - \sum_{i=1}^{N}\log x_i!\\
+\frac{\partial}{\partial \lambda}\log p(D|\lambda) & = -N + \frac{1}{\lambda}\sum_{i=1}^{N}x_i\\
+\therefore\lambda_{MLE} & =\frac{1}{N}\sum_{i=1}^{N}x_i
+\end{align}
+
+\section*{Exercise 3.7 Bayesian analysis of the Poisson distribution}
+\subsection*{(a)}
+\begin{align}
+p(\lambda|D) & \propto p(\lambda)p(D|\lambda)\\
+& \propto \lambda^{a-1}e^{-\lambda b}e^{-N\lambda}\frac{\lambda^{\sum_{i=1}^{N}x_i}}{\Pi_{i=1}^{N}(x_i!)}\\
+& = e^{-\lambda(N+b)}\frac{\lambda^{\sum_{i=1}^{N}x_i}}{\Pi_{i=1}^{N}(x_i!)}\\
+& \propto Ga(\lambda|a + \sum_{i=1}^{N}x_i, b + N)
+\end{align}
+\subsection*{(b)}
+\begin{align}
+\frac{a+\sum_{i=1}^{N}x_i}{b+N} & \rightarrow \frac{1}{N}\sum_{i=1}^{N}x_i\\
+& = \lambda_{MLE}
+\end{align}
 \end{document}
