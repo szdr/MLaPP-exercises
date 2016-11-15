@@ -146,4 +146,45 @@ p(x=150|D,\alpha) & = \frac{100}{2 \cdot 150^2} = \frac{1}{450}
 	\item More observations, more accurate.
 	\item Thy hyper-parameter of prior should be set by other information.
 \end{itemize}
+
+\section*{Exercise 3.11 Bayesian analysis of the exponential distribution}
+\subsection*{(a)}
+\begin{align}
+\log p(D|\theta) & = N\log\theta - \theta \sum_{i=1}^{N}x_i \\
+\frac{d}{d\theta} p(D|\theta) & = \frac{N}{\theta}-\sum_{i=1}^{N}x_i \\
+\hat{\theta}_{\rm MLE} & = \frac{1}{\bar{x}}
+\end{align}
+\subsection*{(b)}
+\begin{align}
+\hat{\theta}_{\rm MLE} & = \frac{1}{\frac{5+6+4}{3}}\\ & = 1/5
+\end{align}
+\subsection*{(c)}
+\begin{align}
+E[\theta] & = \int_{0}^{\infty}\theta p(\theta)d\theta \\
+& = \lambda \theta e^{-\lambda \theta}d\theta\\
+& = \frac{1}{\lambda}\\
+\hat{\lambda} & = 3
+\end{align}
+If we use hint, 
+\begin{align}
+p(\theta) & \propto {\rm Ga}(\theta|1, \lambda)\\
+E[\theta] & = \frac{1}{\lambda}
+\end{align}
+\subsection*{(d)}
+\begin{align}
+p(\theta|D,\hat{\lambda}) & \propto p(D|\theta)p(\theta|\hat{\lambda})\\
+& = \theta^N \exp(-\theta \sum_{i=1}^{N}x_i)\hat{\lambda}\exp(-\hat{\lambda}\theta)\\
+& = \hat{\lambda}\theta^N\exp(-\theta(\hat{\lambda}+\sum_{i=1}^{N}x_i))\\
+& \propto {\rm Ga}(\theta|N+1, \hat{\lambda}+\sum_{i=1}^{N}x_i)
+\end{align}
+\subsection*{(e)}
+The exponential prior is NOT conjugate to the exponential likelihood.
+
+(The Gamma prior is conjugate to the exponential likelihood.)
+\subsection*{(f)}
+\begin{align}
+E[\theta|D,\hat{\lambda}]=\frac{N+1}{\hat{\lambda}+\sum_{i=1}^{N}x_i}
+\end{align}
+\subsection*{(g)}
+$\hat{\lambda}$ can be thought as pseudo sample of machine time. If the expert is collect, this example is reasonable.
 \end{document}
