@@ -187,4 +187,20 @@ E[\theta|D,\hat{\lambda}]=\frac{N+1}{\hat{\lambda}+\sum_{i=1}^{N}x_i}
 \end{align}
 \subsection*{(g)}
 $\hat{\lambda}$ can be thought as pseudo sample of machine time. If the expert is collect, this example is reasonable.
+
+\section*{Exercise 3.12 MAP estimation for the Bernoulli with non-conjugate priors}
+\subsection*{(a)}
+\begin{align}
+p(D|\theta) & = \theta^{N_1}(1-\theta)^{N-N_1}\\
+p(\theta|D) & \propto p(D|\theta)p(\theta)\\
+& \propto \begin{cases}
+\theta^{N_1}(1-\theta)^{N-N_1} & (\theta = 0.4\ {\rm or}\ 0.5)\\
+0 & (\rm otherwise)
+\end{cases}\\
+\hat{\theta}_{\rm MAP}&=\arg \max_{\theta \in \{0.4, 0.5\}}\theta^{N_1}(1-\theta)^{N-N_1}
+\end{align}
+\subsection*{(b)}
+When $N$ is small, the effect of $\alpha$ and $\beta$ of the conjugate prior is large and $\theta=0.41$ may not be estimated. On the other hand, the non-conjugate prior will emit $\theta=0.4$ or $0.5$, so the non-conjugate prior is better.
+
+When $N$ is large, $\hat{\theta}_{\rm MAP}$ of the conjugate prior converges to 0.41, but $\hat{\theta}_{\rm MAP}$ of the non-conjugate prior converges to 0.4. Since, the conjugate prior is better.
 \end{document}
